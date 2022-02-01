@@ -70,7 +70,7 @@ def Main():
     try:
         with open(GAMES, newline='') as games:
             for g in csv.reader(games, delimiter=','):
-                if g[0] != 'PLAYER A':
+                if g[0] != 'PLAYER 1':
                     gameList.append(g)
 
     except OSError as e:
