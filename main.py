@@ -46,19 +46,19 @@ def updateElo(player, elo, playerList):
 def saveCSV(playerList, path):
     try:
         with open(path, 'w', newline='') as result:
-            writer = csv.writer(result, delimiter='-', quoting=csv.QUOTE_MINIMAL)
+            writer = csv.writer(result, delimiter=',', quoting=csv.QUOTE_MINIMAL)
             for player in playerList:
                 writer.writerow(player)
     except OSError as e:
         print(e)
 
 def Main():
-    
+
     # playerList Formating
     playerList = []
     try:
         with open(PLAYERS, newline='') as players:
-            for p in csv.reader(players, delimiter=';'):
+            for p in csv.reader(players, delimiter=','):
                 if p[0] != 'PLAYER':
                     playerList.append(p)
 
@@ -69,7 +69,7 @@ def Main():
     gameList = []
     try:
         with open(GAMES, newline='') as games:
-            for g in csv.reader(games, delimiter=';'):
+            for g in csv.reader(games, delimiter=','):
                 if g[0] != 'PLAYER A':
                     gameList.append(g)
 

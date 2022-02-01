@@ -1,6 +1,6 @@
-PLAYER; ELO
-Player A;2865
-Player B;2804
-Player C;2799
-Player D;2792
-Player E;2773
+PLAYER, ELO
+Player A,2865
+Player B,2804
+Player C,2799
+Player D,2792
+Player E,2773
